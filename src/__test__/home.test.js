@@ -1,10 +1,10 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { HomeScreen } from '../src/views'
+import { HomeView } from 'views'
 
 describe('Text', () => {
   it('renders a text', () => {
-    render(<HomeScreen />)
+    render(<HomeView />)
 
     const content = screen.getByText(/Boilerplate by KayPacha/i)
 

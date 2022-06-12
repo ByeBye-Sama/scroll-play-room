@@ -1,5 +1,7 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
+
+import { DefaultLayout } from 'layouts'
 import { reset } from 'utils'
 
 const GlobalStyle = createGlobalStyle`
@@ -10,7 +12,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <DefaultLayout>
+        <Component {...pageProps} />
+      </DefaultLayout>
     </>
   )
 }
