@@ -1,5 +1,6 @@
-import React from 'react'
+import * as React from 'react'
 import { createGlobalStyle } from 'styled-components'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 import { DefaultLayout } from 'layouts'
 import { reset } from 'utils'
@@ -12,9 +13,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
-      <DefaultLayout>
-        <Component {...pageProps} />
-      </DefaultLayout>
+      <ParallaxProvider>
+        <DefaultLayout>
+          <Component {...pageProps} />
+        </DefaultLayout>
+      </ParallaxProvider>
     </>
   )
 }

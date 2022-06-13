@@ -1,1 +1,2 @@
-export { default as Text } from './text'
+export * from './parallax-box'
+export * from './text'

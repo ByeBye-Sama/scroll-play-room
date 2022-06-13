@@ -1,16 +1,17 @@
-import React from 'react'
+import * as React from 'react'
 import { HomeView } from 'views'
 
 import Scrollbar from 'react-smooth-scrollbar'
 
 const HomePage = () => {
+  const [value, setValue] = React.useState(false)
+
   return (
     <Scrollbar
       damping={0.01}
       thumbMinSize={60}
       renderByPixels={true}
       continuousScrolling={true}
-      s
       plugins={{
         overscroll: {
           damping: 0.2,
@@ -19,9 +20,9 @@ const HomePage = () => {
           effect: 'bounce',
         },
       }}
-      // onScroll={func}
+      onScroll={() => setValue(!value)}
     >
-      <div className="list-data" style={{ height: '100vh' }}>
+      <div style={{ height: '100vh' }}>
         <HomeView />
       </div>
     </Scrollbar>

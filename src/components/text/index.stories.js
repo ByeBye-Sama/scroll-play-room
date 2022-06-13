@@ -1,5 +1,5 @@
-import React from 'react'
-import Text from './index'
+import * as React from 'react'
+import Text from './text'
 
 export default {
   title: 'Text',
