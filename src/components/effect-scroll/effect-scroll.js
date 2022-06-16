@@ -5,7 +5,7 @@ const EffectScroll = props => {
   const { children } = props
 
   useEffect(() => {
-    smoothScroll(document, 25, 20)
+    smoothScroll(document, 20, 20)
   }, [])
 
   return <div style={{ width: '100%' }}>{children}</div>
