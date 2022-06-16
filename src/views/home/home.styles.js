@@ -3,8 +3,9 @@ import styled from 'styled-components'
 import theme from 'theme'
 
 const HomeContainer = styled.div({
-  display: 'flex',
   alignItems: 'center',
+  backgroundColor: theme.colors.black,
+  display: 'flex',
   flexDirection: 'column',
   maxWidth: '100vw',
   overflowX: 'hidden',
